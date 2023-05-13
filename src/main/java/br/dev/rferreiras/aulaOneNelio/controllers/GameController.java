@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.dev.rferreiras.aulaOneNelio.dto.GameMinDTO;
 import br.dev.rferreiras.aulaOneNelio.entities.Game;
 import br.dev.rferreiras.aulaOneNelio.services.GameService;
 
@@ -16,9 +17,9 @@ public class GameController {
 	@Autowired
 	private GameService gameService;
 	@GetMapping
-	public List<Game> findAll() {
+	public List<GameMinDTO> findAll() {
 		
-		List<Game> result = gameService.findAll();
+		List<GameMinDTO> result = gameService.findAll();
 		return result;
 		
 	}
