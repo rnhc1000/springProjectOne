@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 public class GameList {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private String name;
 	
 	public GameList() {
@@ -20,17 +20,17 @@ public class GameList {
 	}
 
 	public GameList(Long id, String name) {
-		Id = id;
+		this.id = id;
 		this.name = name;
 	}
 
 
 	public Long getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -44,7 +44,7 @@ public class GameList {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Id);
+		return Objects.hash(id);
 	}
 
 
@@ -57,7 +57,7 @@ public class GameList {
 		if (getClass() != obj.getClass())
 			return false;
 		GameList other = (GameList) obj;
-		return Objects.equals(Id, other.Id);
+		return Objects.equals(id, other.id);
 	}
 	
 	
