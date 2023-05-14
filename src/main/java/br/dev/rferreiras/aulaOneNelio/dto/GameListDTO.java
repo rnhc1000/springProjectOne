@@ -26,6 +26,4 @@ public class GameListDTO {
 		return name;
 	}
 
-
-
 }
